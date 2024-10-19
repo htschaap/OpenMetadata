@@ -66,7 +66,7 @@ COPY --chown=airflow:0 --chmod=775 ingestion/ingestion_dependency.sh /opt/airflo
 # Required for Ingesting Sample Data
 COPY --chown=airflow:0 ingestion/examples/sample_data /home/airflow/ingestion/examples/sample_data
 # Required for Airflow DAGs of Sample Data
-COPY --chown=airflow:0 ingestion/examples/airflow /opt/airflow
+COPY --chown=airflow:0 ingestion/examples/airflow/dags /opt/airflow/dags
 USER airflow
 # Argument to provide for Ingestion Dependencies to install. Defaults to all
 ARG INGESTION_DEPENDENCY="all"
